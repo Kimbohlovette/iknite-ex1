@@ -1,0 +1,200 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+
+.btn {
+    padding: 8px 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-primary {
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: lightblue;
+}
+
+
+section{
+    margin: 28px;
+    padding: 28px;
+    width: 100%;
+}
+
+
+/*===================== header ==========================*/
+
+header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+header .brand {
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+header .brand .dot {
+    color: #f8b283;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   column-gap: 24px;
+   font-size: small;
+   color: #413f3f;
+}
+
+header .navbar.mobile {
+    display: none;
+}
+
+header .navbar .navItem {
+    cursor: pointer;
+}
+
+header .navbar li:first-child {
+    font-weight: bold;
+}
+header .navbar li:hover {
+    color: #898d92;
+}
+
+/* ================= home ===================*/
+
+#home {
+    display: flex;
+    flex-direction: row;
+}
+
+#home .home-text-container h1 {
+    font-size: 45px;
+    padding: 16px 0px;
+}
+
+#home .home-text-container h2 .dash{
+    font-size: 45px;
+    font-weight: lighter;
+    color: gray;
+}
+
+#home .home-text-container h2 .what-we-do {
+    font-size: 28px;
+    padding: 8px 0px;
+    font-weight: lighter;
+    color: #f57c8a;
+}
+
+#home .home-image-container img:hover {
+    transform: scale(1.05);
+}
+#home .home-image-container img{
+    transition: transform 3s;
+}
+
+#home .btn {
+    margin: 16px 0px;
+}
+
+/*=============== services =======================*/
+
+#services {
+    display:flex;
+    justify-content: space-around;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+}
+
+#services .card {
+    padding: 8px;
+    border-radius: 10px;
+}
+#services .card:hover {
+    background-color: white;
+    box-shadow: 2px 2px 8px 2px rgb(0, 0, 0, 0.22);
+}
+
+#services .icon {
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+#services h4 {
+    padding: 12px 0px;
+    font-size: 16px;
+}
+
+#services p {
+    padding: 4px 0px;
+    font-size: small;
+    font-weight: 100;
+}
+
+#services .btn-studio {
+    border-radius: 32px;
+    background-color: green;
+    color: white;
+}
+#services .btn-pro {
+    border-radius: 32px;
+    background-color: #f3f5f7;
+}
+
+#services .card:first-child .btn-studio {
+    background-color: #ff6600;
+}
+
+
+
+/*======================= @media-query(max-width: 2024px) ========================*/
+
+/*=============================navbar mobile ================*/
+@media(max-width: 1024px) {
+    section {
+        width: 100%;
+        margin: 32px;
+    }
+    header {
+        width: 100%;
+    }
+    .mobile.navbar {
+    display: flex;
+    flex-direction: column;
+    }
+
+    header .navbar.desktop {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/* =================== animation keyframes =============*/
+
+
