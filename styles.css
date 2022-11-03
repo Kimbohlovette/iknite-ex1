@@ -187,22 +187,6 @@ header .navbar .navItem:hover {
     container-type: inline-size;
 }
 
-@container ( min-width: 10em) {
-    .card {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-    }
-
-    .card .icon {
-        flex: 1;
-    }
-
-    .card div {
-        flex: 3
-    }
-}
-
 #services .card {
     padding: 24px;
     border-radius: 10px;
