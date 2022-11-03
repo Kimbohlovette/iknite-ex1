@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/Sio-favicon.png">
+    <link rel="prefetch" href="./assets/home-image2.png" as="image">
     <link rel="stylesheet" href="./styles.css">
     <title>Sio Landing Page</title>
 </head>
@@ -23,16 +24,21 @@
             </ul>
         </nav>
         <nav class="navbar-mobile">
-            <span class="nav-menu">
+            <label for="toggler" class="nav-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
-            </span>
-            <ul class="navbar-collapse">
-                <li class="navItem">Home</li>
-                <li class="navItem">Key Features</li>
-                <li class="navItem">Pricing</li>
-                <li class="navItem">Testimonial</li>
-                <li class="navItem">FAQ</li>
-            </ul>
+            </label>
+            <input type="checkbox" name="toggler" id="toggler" class="toggler">
+            <div class="navbar-collapse">
+                <label for="toggler" class="close">X</label>
+                <ul>
+                    <li class="navItem">Home</li>
+                    <li class="navItem">Key Features</li>
+                    <li class="navItem">Pricing</li>
+                    <li class="navItem">Testimonial</li>
+                    <li class="navItem">FAQ</li>
+                </ul>
+            </div>
+           
         </nav>
         <button class="btn btn-primary login-btn">Log in</button>
     </header>
@@ -48,13 +54,13 @@
             </div>
     
             <div class="home-image-container">
-                <img src="./assets/home-image2.png">
+                <img src="./assets/home-image2.png" loading="eager">
             </div>
         </section>
     
         <section id="services">
             <div class="card">
-                <img src="./assets/target-icon.png" class="icon">
+                <img src="./assets/target-icon.png" class="icon" loading="lazy">
                 <div>
                     <h4>QUALITY SERVICES</h4>
                     <p>At our fitness/ <button class="btn btn-studio">studio</button></p>
@@ -62,19 +68,19 @@
                 </div>
             </div>
             <div class="card">
-                <img src="./assets/space-icon.png" class="icon">
+                <img src="./assets/space-icon.png" class="icon" loading="lazy">
                 <h4>SPACIOUS GYM</h4>
                 <p>At our fitness/ <button class="btn btn-studio">studio</button></p>
                 <button class="btn btn-pro">Pro</button>
             </div>
             <div class="card">
-                <img src="./assets/balls-icon.png" class="icon">
+                <img src="./assets/balls-icon.png" class="icon" loading="lazy">
                 <h4>UNIQUE PROGRAMS</h4>
                 <p>At our fitness/ <button class="btn btn-studio">studio</button></p>
                 <button class="btn btn-pro">Pro</button>
             </div>
             <div class="card">
-                <img src="./assets/book-stack-icon.png" class="icon">
+                <img src="./assets/book-stack-icon.png" class="icon" loading="lazy">
                 <h4>GROUP CLASSES</h4>
                 <p>At our fitness/ <button class="btn btn-studio">studio</button></p>
                 <button class="btn btn-pro">Pro</button>
