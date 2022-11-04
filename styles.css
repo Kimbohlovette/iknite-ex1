@@ -7,6 +7,13 @@
     border: none;
     transition: all 0.2s;
     box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    color: black;
+    background-color: white;
 }
 
 p {
@@ -51,7 +58,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    margin-block: 0;
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
 }
 
 header .brand {
@@ -79,17 +88,7 @@ header .navbar-mobile, .navbar-collapse {
 }
 
 
-header .nav-menu {
-    font-size: 24px;
-    cursor: pointer;
-}
 
-header .close {
-    float: right;
-}
-header .navbar-mobile #toggler {
-    opacity: 0;
-}
 
 header #toggler:checked ~ .navbar-collapse{
     display: block;
@@ -97,27 +96,53 @@ header #toggler:checked ~ .navbar-collapse{
 
 .navbar-collapse {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: auto;
+    inset-block-start:0;
+    inset-inline-end: 0.25rem;
     background-color: white;
-    z-index: 5;
+    z-index: 15;
     box-shadow: 2px 2px 6px 1px lightgray;
-    padding: 20px;
+    padding-block: 2rem;
+    width: 75%;
+  
 }
 
 
+header .close-container {
+    inline-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
-header .navbar .navItem {
+header .nav-menu {
+    padding: 0.5rem 1rem;
+    background-color: #e8eff7;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+header .close {
+    padding:16px 2.5rem;
+}
+
+
+header .navbar-mobile #toggler {
+    opacity: 0;
+}
+
+
+header .navItem {
     cursor: pointer;
     border-radius: 15px;
-    padding: 8px 16px;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
 }
 
-header .navbar li:first-child {
+
+header .navbar .navItem:first-child {
     font-weight: bold;
 }
-header .navbar .navItem:hover {
+
+header .navItem:hover {
     background-color: #e8eff7;
 }
 
@@ -134,6 +159,7 @@ header .navbar .navItem:hover {
 #home .home-text-container h1 {
     font-size: clamp(0.75rem, 2.4rem + 1.5vw, 5rem);
     padding: 16px 0px;
+    animation: fadeIn 7s ease-in;
 }
 
 #home .home-text-container h2 {
@@ -282,6 +308,9 @@ header .navbar .navItem:hover {
 
 
 @media (max-width: 425px) {
+    header .navbar-collapse{
+        inline-size: 100%;
+    }
     nav{
         display: none;
     }
@@ -293,6 +322,21 @@ header .navbar .navItem:hover {
 
 
 /* ============================== @keyframes =====================================*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 
 

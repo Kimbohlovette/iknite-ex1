@@ -24,19 +24,20 @@
             </ul>
         </nav>
         <nav class="navbar-mobile">
-            <label for="toggler" class="nav-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
-            </label>
+            <label for="toggler" class="nav-menu">Menu</label>
             <input type="checkbox" name="toggler" id="toggler" class="toggler">
             <div class="navbar-collapse">
-                <label for="toggler" class="close">X</label>
-                <ul>
+                <ul class="close-container">
+                    <li><label for="toggler" class="close"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/></svg></label></li>
+                </ul>
+                <ul class="dropdown-menu">
                     <li class="navItem">Home</li>
                     <li class="navItem">Key Features</li>
                     <li class="navItem">Pricing</li>
                     <li class="navItem">Testimonial</li>
                     <li class="navItem">FAQ</li>
                 </ul>
+                
             </div>
            
         </nav>
