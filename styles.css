@@ -17,16 +17,17 @@ body {
 }
 
 p, .navItem, .btn {
-    font-size: clamp(1.0rem, 0.5rem + 0.75vw, 1.75rem);
+    font-size: clamp(0.85rem, 0.5rem + 0.5vw, 1rem);
+    line-height: 1.5;
 }
 
 .btn {
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     font-weight: 600;
     cursor: pointer;
 }
 .btn-primary {
-    border-radius: 15px;
+    border-radius: 1rem;
     background-color: blue;
     color: white;
 
@@ -42,20 +43,20 @@ p, .navItem, .btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8rem;
+    padding-inline: 8rem;
 }
 
 section{
     padding: 2rem;
-    width: 100%;
-    margin: 16px 0px;
+    inline-size: 100%;
+    margin-block: 1rem;
 }
 
 /*===================== header ==========================*/
 
 header {
     display: flex;
-    width: 100%;
+    inline-size: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -72,14 +73,14 @@ header .brand {
 
 header .brand .dot {
     color: #f8b283;
-    font-size: 45px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem;
+    font-family:serif;
 }
 header .navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
-   column-gap: 24px;
+   column-gap: 1.5rem;
    font-size: small;
    color: #413f3f;
 }
@@ -101,7 +102,7 @@ header #toggler:checked ~ .navbar-collapse{
     inset-inline-end: 0.25rem;
     background-color: white;
     z-index: 15;
-    box-shadow: 2px 2px 6px 1px lightgray;
+    box-shadow: 0.125rem 0.125rem 0.5rem 0.0625rem lightgray;
     padding-block: 2rem;
     width: 75%;
   
@@ -122,7 +123,7 @@ header .nav-menu {
     cursor: pointer;
 }
 header .close {
-    padding:16px 2.5rem;
+    padding:1rem 2.5rem;
 }
 
 
@@ -133,7 +134,7 @@ header .navbar-mobile #toggler {
 
 header .navItem {
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 1rem;
     padding-inline: 1rem;
     padding-block: 0.5rem;
 }
@@ -159,27 +160,28 @@ header .navItem:hover {
 
 #home .home-text-container h1 {
     font-size: clamp(0.75rem, 1.4rem + 1.5vw, 5rem);
-    padding: 8px 0px;
+    padding-block: 0.5rem;
     animation: fadeIn 7s ease-in;
 }
 
 #home .home-text-container h2 {
-    padding: 8px 0px;
+    padding-block: 0.5rem;
 
 }
 #home .home-text-container{
-    flex: 1
+    flex-grow: 1
 }
 
 #home .home-text-container h2 .dash{
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: lighter;
     color: gray;
 }
 
 #home .home-text-container h2 .what-we-do {
-    font-size: 1.5em;
-    padding: 8px 16px;
+    font-size: 2rem;
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
     font-weight: lighter;
     color: #f57c8a;
 }
@@ -207,7 +209,7 @@ header .navItem:hover {
 }
 
 #home .btn {
-    margin: 16px 0px;
+    margin-block: 1rem;
 }
 
 /*=============== services =======================*/
@@ -216,38 +218,39 @@ header .navItem:hover {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
     background-color: #f3f5f7;
-    border-radius: 20px;
-    column-gap: 24px;
-    width: 100%;
+    border-radius: 1.25rem;
+    grid-gap: 1.25rem;
+    inline-size: 100%;
 }
 
 #services .card {
-    padding: 24px;
-    border-radius: 10px;
-}
-#services .card:hover {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
     background-color: white;
-    box-shadow: 2px 2px 8px 2px rgb(0, 0, 0, 0.22);
+    box-shadow: 0.125rem 0.125rem 0.5rem 0.125rem rgb(0, 0, 0, 0.22);
+}
+
+#services .card:hover {
+    transform: scale(1.03);
 }
 
 #services .icon {
-    padding: 4px;
-    width: auto;
-    height: 49px;
+    padding: 0.25rem;
+    inline-size: auto;
+    height: 3rem;
 }
 
 #services h4 {
-    padding: 12px 0px;
-    font-size: 16px;
+    padding-block: 0.75rem;
+    font-size: 1rem;
 }
 
 #services p {
-    padding: 4px 0px;
-    font-weight: 100;
+    padding-block:0.25rem;
 }
 
 #services .btn-studio {
-    border-radius: 32px;
+    border-radius: 2rem;
     background-color: green;
     color: white;
 }
@@ -256,7 +259,7 @@ header .navItem:hover {
    background-color: rgb(2, 87, 2);
 }
 #services .btn-pro {
-    border-radius: 32px;
+    border-radius: 2rem;
     background-color: #f3f5f7;
 }
 
@@ -275,7 +278,7 @@ header .navItem:hover {
 @media (max-width: 1440px) {
 
     .container {
-        padding: 0px 4rem;
+        padding-inline: 4rem;
     }
 }
 
@@ -283,18 +286,19 @@ header .navItem:hover {
 @media ( max-width: 1024px) {
 
     #home .home-text-container h1, 
-    #home .home-text-container h2, 
-    #home .home-text-container p {
+    #home .home-text-container h2 {
         max-inline-size: 100%;
-        line-height: 1.5;
     }
     
 }
 
 
 @media (max-width: 768px) {
+    section {
+        padding-inline: 0.75rem;
+    }
     .container {
-        padding: 0px 2rem;
+        padding-inline: 2rem;
     }
 
     header .navbar-mobile{
@@ -316,7 +320,7 @@ header .navItem:hover {
     }
 
     .container {
-        padding: 0px 0.25rem;
+        padding-inline: 0.25rem;
     }
 }
 
